@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 15pt Arial;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        pre{
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Ja me livrei da maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+    </script>
+
+
+    <h3>Number</h3>
+    <code>
+        Inteiros ou float
+        <pre>
+            var n1 = Number(window.prompt('Digite um número: '))
+            var n2 = Number(window.prompt('Digite outro número: '))
+            var s = n1 + n2
+            window.alert('A soma dos valores é ' + s)
+        </pre>
+    </code>
+    <code>
+        Numeros inteiros
+        <pre>
+            var n1 = Number.parseInt(window.prompt('Digite um número: '))
+            var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+            var s = n1 + n2
+            window.alert('A soma dos valores é ' + s)
+        </pre>
+    </code>
+    <code>
+        Numeros float
+        <pre>
+            var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+            var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+            var s = n1 + n2
+            window.alert('A soma dos valores é ' + s)
+        </pre>
+    </code>
+
+    <h4>Converter</h4>
+    <p>String > Number</p>
+    <ul>
+        <li>Number.parseInt(n)</li>
+        <li>Number.parseFloat(n)</li>
+        <li>Number(n)</li>
+    </ul>
+    <p>Number > String</p>
+    <ul>
+        <li>String(n)</li>
+        <li>n.toString()</li>
+    </ul>
+    <h3>O que dá pra fazer com números</h3>
+    <code>
+        Colocando mais números depois da vírgula
+        <pre>
+            n1 = 1545.5
+            n1.toFixed(2)
+        </pre>
+        Trocar o ponto pela vírgula
+        <pre>
+            n1.toFixed(2).replace('.',',')
+        </pre>
+        Colocando em valor monetário
+        <pre>
+            n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+            n1.toLocaleString('pt-BR',{style: 'currency', currency: 'USD'})
+            n1.toLocaleString('pt-BR',{style: 'currency', currency: 'EUR'})
+        </pre>
+    </code>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 15pt Arial;
+        }
+
+        h1 {
+            color: yellow;
+        }
+
+        pre{
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Ja me livrei da maldição</p>
+    <script>
+        // Pergunta seu nome
+       var nome = window.prompt('Qual é seu nome?')
+        alert('É um grande prazer te conhecer, ' + nome + '!') // + serve para concatenação
+    </script>
+    
+    <h3>String</h3>
+    <code>
+        <pre>
+            var nome = window.prompt('Qual é seu nome?')
+            window.alert('É um grande prazer te conhecer, ' + nome + '!')
+        </pre>
+    </code>
+
+    <h4>Formatando Strings</h4>
+    <ul>
+        <li>var s = 'JavaScript'</li>
+        <li>var s = "JavaScript"</li>
+        <li></li>
+    </ul>
+    <p>Um jeito de concatenar variavel e texto</p>
+    <code>
+        <pre>
+            var s = 'JavaScript'
+            'Eu estou aprendendo s'     | jeito errado
+            'Eu estou aprendendo ' + s  | concatenação
+            `Eu estou aprendendo ${s}`  | template string
+        </pre>
+    </code>
+
+    <code>
+        <pre>
+            var s = "JavaScript"
+            s.length        | quantos caracteres a string tem
+            s.toUpperCase() | tudo para 'MAIÚSCULAS'
+            s.toLowerCase() | tudo para 'minúsculas'
+        </pre>
+    </code>
+</body>
+
+</html>
