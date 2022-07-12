@@ -12,6 +12,42 @@
         strong{
             font-weight: bolder;
         }
+        table{
+            border-collapse: collapse;
+        }
+        tr, td, th{
+            border: 1px solid black;
+        }
+        th{
+            width: 25px;
+        }
+        .azul{
+            color: blue;
+        }
+        .vermelho{
+            color: red;
+        }
+        .verde{
+            color: green;
+        }
+        .bloco{
+            display: inline-block;
+            font-weight: bold;
+            font-size: large;
+            color: white;
+            
+        }
+        .cinza{
+            background-color: gray;
+            padding: 5px;
+            margin: 1px;
+            border-radius: 7px;
+        }
+        .brow{
+            background-color: brown;
+            padding: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -33,12 +69,25 @@
         <li>5 <strong>**</strong> 2 = 25</li>
     </ul>
     <h4>Ordem de precedência dos operadores aritméticos</h4>
-    <ul>
+    <ol>
         <li>()</li>
         <li>**</li>
         <li>* / %</li>
         <li>+ -</li>
-    </ul>
+    </ol>
+    <h4>Ordem de precedência em uma expressão</h4>
+    <p>a <span class="vermelho">></span> b <span class="verde">&&</span> b <span class="azul">%</span> 2 <span class="vermelho">==</span> 0 (False)</p>
+    <ol>
+        <li class="azul">Operadores Aritméticos</li>
+        <li class="vermelho">Operadores Relacionais</li>
+        <li class="verde">Operadores Lógicos</li>
+    </ol>
+    <h4>Ordem de precedência entre operadores lógicos</h4>
+    <ol>
+        <li>!</li>
+        <li>&&</li>
+        <li>||</li>
+    </ol>
     <h2>Atribuição</h2>
     <p> = recebe</p>
     
@@ -83,6 +132,136 @@
             x -- (subtrair 1)
         </code>
     </pre>
+    <h2>Relacionais</h2>
+    <ul>
+        <li>> (maior)</li>
+        <li>< (menor)</li>
+        <li>>= (maior igual)</li>
+        <li><= (menor igual)</li>
+        <li>== (igual)</li>
+        <li>!= (diferente)</li>
+    </ul>
+    <h4>Identidade</h4>
+    <p>
+        5 == 5      -> true <br>
+        5 == '5'    -> true // ele compara o número, não o tipo dele <br>
+        5 === '5'   -> false // ele compara o número e o tipo <br>
+
+        === (idêntico)
+    </p>
+    <p>
+        5 != '5'        -> false <br>
+        5 !== '5'       -> true <br>
+
+        !== (desigual restrito)
+    </p>
+
+    <h2>Lógicos</h2>
+    <ul>
+        <li>! (negação)</li>
+        <li>&& (e)</li>
+        <li>|| (ou)</li>
+    </ul>
+    <h4>Negação</h4>
+    <table>
+        <tr>
+            <th rowspan="3">!</th>
+        </tr>
+        <tr>
+            <td><strong>True</strong></td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td><strong>False</strong></td>
+            <td>True</td>
+        </tr>
+    </table>
+    <h4>Conjunção</h4>
+    <table>
+        <tr>
+            <th>1°</th>
+            <th>&&</th>
+            <th>2°</th>
+            <th>=</th>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>E</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>E</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>E</td>
+            <td>True</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>E</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+    </table>
+    <h4>Disjunção</h4>
+    <table>
+        <tr>
+            <th>1°</th>
+            <th>||</th>
+            <th>2°</th>
+            <th>=</th>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>OU</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>True</td>
+            <td>OU</td>
+            <td>False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>OU</td>
+            <td>True</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>False</td>
+            <td>OU</td>
+            <td>False</td>
+            <td>False</td>
+        </tr>
+    </table>
+    <h2>Ternário</h2>
+    <ul>
+        <li>?</li>
+        <li>:</li>
+    </ul>
+    <p>Junta 3 operando</p>
+    <p class="bloco">
+        <span class="cinza">Teste</span>
+        <span class="brow">?</span>
+        <span class="cinza">True</span>
+        <span class="brow">:</span>
+        <span class="cinza">False</span>
+    </p> <br>
+    <p class="bloco">
+        <span class="cinza">média >= 7.0</span>
+        <span class="brow">?</span>
+        <span class="cinza">"Aprovado"</span>
+        <span class="brow">:</span>
+        <span class="cinza">"Reprovado"</span>
+    </p>
     <script>
         var a = 5 + 3
         var b = a % 5
@@ -90,6 +269,13 @@
         var d = 10 - a / 2
         var e = 6 * 2 / d
         var f = b % e + 4 / 2
+
+        5 > 2
+        7 < 4
+        8 >= 8
+        9 <= 7
+        5 == 5
+        4 != 4
     </script>
 </body>
 </html>
