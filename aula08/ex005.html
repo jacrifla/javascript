@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos co DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p class="aqui">Aqui vai o resultado</p>
+    <p name = 'name'>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        /*
+        // 0 é o primeiro paragrafo q aparecer e assim sucessivamente
+        // Precisa dizer qual paragrafo acessar
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        // mudar de cor da fonte
+        p1.style.color = 'blue'
+        // mudar cor de fundo
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        // pega o texto com a formatação
+        // document.write(p1.innerHTML)
+        // pega o texto sem a formatação
+        // window.alert(p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        // window.document.getElementById('msg').innerText = 'Olá!'
+        var m = window.document.getElementsByName('name')[0]
+        m.innerText = 'Hello'
+        var z = window.document.getElementsByClassName('aqui')[0]
+        z.style.color = 'red'
+        */
+       var d = window.document.querySelector('div#msg')
+       d.style.background = 'blue'
+       var e = window.document.querySelector('p.aqui')
+       e.style.background = 'red'
+    </script>
+
+</body>
+</html>

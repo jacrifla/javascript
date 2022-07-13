@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução do DOM</title>
+    <style>
+        body{
+            background-color: bisque;
+            font: normal 15pt Arial;
+            text-align: center;
+        }
+        img{
+            width: 300px;
+        }
+        pre{
+            
+            font-size: medium;
+            text-align: left;
+        }
+        ul,p{
+            text-align: left;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .bloco{
+            background-color: rgb(204, 25, 79);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100px;
+            margin: 3px;
+            border-radius: 5px;
+        }
+        .inline{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Árvore DOM</h1>
+    <h2>O que é DOM</h2>
+    <p><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</p>
+    <img src="arvore.png">
+    <pre>
+        <code>
+            // Não é o melhor jeito. Mas é o mais fácil
+            window.document.write('Olá Mundo')
+        </code>
+    </pre>
+
+    <h2>Selecionando</h2>
+    <ul>
+        <li>por Marca</li>
+        <li>por ID</li>
+        <li>por Nome</li>
+        <li>por Classe</li>
+        <li>por Seletor</li>
+    </ul>
+    <h4>por Marca</h4>
+    <p>
+        Selecionar mais de um elemento: <br>
+        getElementsByTagName()
+    </p>
+    
+    <pre>
+        <code>
+            // 0 é o primeiro paragrafo q aparecer e assim sucessivamente
+            // Precisa dizer qual paragrafo acessar
+            var p1 = window.document.getElementsByTagName('p')[0]
+            window.document.write('Está escrito assim: ' + p1.innerText)
+        </code>
+    </pre>
+
+    <h4>por ID</h4>
+    <p>
+        Selecionar pela Id
+        getElementById()
+    </p>
+    <pre>
+        <code>
+            var d = window.document.getElementById('id')
+            d.style.background = 'green'
+            d.innerText = 'Estou aguardando...'
+        </code>
+    </pre>
+    <h4>por Nome</h4>
+    <p>
+        selecionar por nome
+        getElementsByName()
+    </p>
+    <pre>
+        <code>
+            var m = window.document.getElementsByName('name')[0]
+            m.innerText = 'Hello'
+        </code>
+    </pre>
+    <h4>por Classe</h4>
+    <p>
+        getElementsByClassName()
+    </p>
+    <pre>
+        <code>
+            var z = window.document.getElementsByClassName('class')[0]
+            z.style.color = 'red'
+        </code>
+    </pre>
+    <h4>por Seletor</h4>
+    <p>
+        querySelector() <br>
+        querySelectorAll()
+    </p>
+    <pre>
+        <code>
+            // Id na tag
+            var d = window.document.querySelector('div#msg')
+            d.style.background = 'blue'
+
+            // classe na tag
+            var e = window.document.querySelector('p.aqui')
+            e.style.background = 'red'
+        </code>
+    </pre>
+    <script>
+        // Não é o melhor jeito. Mas é o mais fácil
+        window.document.write('Olá Mundo')
+        // Para mostrar o charset
+        window.document.write(window.document.charset)
+        // Mostrar o nome navegador
+        window.document.write(window.navigator.appName)
+        // Mostrar URL atual
+        window.document.write(window.document.URL) 
+    </script>
+</body>
+</html>
