@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 009</title>
+</head>
+<body>
+    <h1>Localidade</h1>
+    País: <input type="text" id="pais">
+    <input type="button" value="Enviar" onclick="send()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function send() {
+            var coutry = document.getElementById('pais').value
+            var res = document.querySelector('#res')
+            res.innerHTML = `<p>Vivendo em <strong>${coutry}</strong></p>`
+            pais = pais.value.toUpperCase()
+
+            if (pais == 'BRASIL') {
+                res.innerHTML += '<p>Você é Brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
