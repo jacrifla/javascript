@@ -1,0 +1,85 @@
+Para mudar a cor de fundo da tela
+** document.body.style.background = 'black' **
+Então ele mudará para preto
+
+AULA 02
+Q01. Sabe a diferença entre um cliente e um servidor para internet?
+R: O cliente é a parte que o cliente enxerga ou com dizemos o front-end. Já o do servidor é conhecido como back-end, onde só os desenvolvedores tem acesso.
+
+Q02. Para que serve HTML, CSS e JavaScript?
+R: O HTML é a estrutura do site, o CSS é a beleza dele e o JavaScript vem para dar o 'movimento' do site.
+
+Q03. Cite 4 sites que fazem uso do JavaScript.
+R: Youtube, Netflix, Facebook, Google
+
+
+AULA 03
+Q01. Sabe que empresa criou o JavaScript?
+R: Netscape
+
+Q02. Java e JavaScript possuem alguma relação?
+R: Só pq estava na em alta o nome Java, eles nomearam o JavaScript para apoveitar o sucesso da linguagem
+
+Q03. O que ECMAScript tem a ver com JavaScript?
+R:O ecma é o JavaScript padronizado
+
+Q04. Sabia que o programa WhatsApp desktop é criado em JavaScript?
+R: Foi baseado com JavaScript
+
+
+AULA 04
+Q01. Que livros/documentos nós recomendamos?
+R:
+
+Q02. Para aprender JS, precisamos saber inglês?
+R: Não
+
+Q03. Que dicas nós demos para quem quer estudar?
+R: Escrever, Codar e fazer junto com outras pessoas para melhor o aprendizado
+
+Q04. Quais progrmas nós instalamos no computador?
+R: Chrome, Node.js e Visual Code
+
+Comandos no JavaScript
+alert('Simples') -> Trava a tela e da uma mensagem
+confirm('?') -> Para confirmar algo na tela, se salvar em uma variavel ele retorna booleano
+prompt('') -> Retorna um valor do usuario
+
+
+AULA 05
+Q01. Ja sabe organizar suas pastas com VScode?
+R: Sim
+
+Q02. O Node.js está instalado no seu computador?
+R: Sim
+
+Q03. Sabe diferenciar HTML5, CSS3 e JS dentro de um código?
+R: Sim
+
+Q04. Sabe disparar alertas, confirmações e pergntas?
+R: Sim
+
+COMENTÁRIOS
+// comentar uma linha
+/* */ comentar mais de uma linha
+
+VARIÁVEL
+
+var -> variavel global
+let ->
+const -> variavel constante, nao pode mudar
+
+DATA TYPES
+number
+    Infinity
+    NaN
+string
+boolean
+null
+undefined
+object
+    array
+function
+
+Para saber o tipo da variavel
+typeof nomeVariavel
