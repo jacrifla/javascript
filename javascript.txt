@@ -59,6 +59,57 @@ R: Sim
 Q04. Sabe disparar alertas, confirmações e pergntas?
 R: Sim
 
+AULA 06
+Q01. O que é uma variável?
+R: É um espacinho na memoria que salva alguma coisa, e pode ser retornado, mostrado ou usado.
+
+Q02. Como declarar uma variável númerica Inteira ou Real usando JS?
+R: Number.parseInt() ou Number.parseFloat()
+
+Q03. Quais são os tipos primitivos do JS?
+R: Alguns deles são number, string, boolean, null entre outros
+
+Q04. O que significa colocar o valor null dentro de uma variável?
+R: Ele terá um valor nulo
+
+AULA 07
+Q01. Como é possível guardar o valor digitado em um prompt() dentro de uma variável?
+R: Criando essa variável
+
+Q02. Como fazer com que um número digitado em um prompt() possa ser usado em cálculos?
+R: Manipulando esse número, usando o Number()
+
+Q03. Como tranformar um texto todo para letras MAIÚSCULAS?
+R: toUpperCase()
+
+Q04. Como mostrar um npumero formatado como um calor monetário?
+R: toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+
+AULA 08
+Q01. Para que serve o operador % em JS? Seria para calcular porcentagem?
+R: Ele volta o resto de uma divisão inteira
+
+Q02. 6 + 4 / 2 é igual a 5 ou 8?
+R: 8
+
+Q03. Se uma variável n está valendo 10 e executamos um n += 5, qual será seu novo valor?
+R: 15
+
+Q04. Para que servem os operadores ++ e --?
+R: São operadores de incremento e decremento, somam ou subtraem 1
+
+AULA 10
+Q01. Qual é a diferença entre usar =, == e  === em códigos escritos em JS?
+R: = recebe == igual === idêntico.
+
+Q02. Em uma mesma expressão, temos os operadores || e &&. Quem eu resolvo primeiro?
+R: &&
+
+Q03. Sabe usar o operador ternário para colocar um entre dois valores em uma variável?
+R: var y = x % 2 == 0 ? 5 : 9
+
+
+========================================================================================
 COMENTÁRIOS
 // comentar uma linha
 /* */ comentar mais de uma linha
@@ -83,3 +134,167 @@ function
 
 Para saber o tipo da variavel
 typeof nomeVariavel
+
+Os principais tipos primitivos são: number e string.
+
+Para pegar uma informação do usuario pode usar o prompt()
+Para dar um alerta na tela alert()
+Quer ter a confirmação do usuario confirm()
+No JavaScript pode usar "" ou ''
+
++ serve para adição ou concatenação. Então quando pegar números é bom converter os tipos quando for fazer soma
+Number.parseInt(n) -> Se o número for inteiro
+Number.parseFloat(n) -> Se o número for com virgula
+Number(n) -> Ele decide qual irá usar, se é inteiro ou float.
+Para fazer conversão de número para string n.toString() ou String(n)
+
+FORMATANDO NÚMEROS
+n1 = 1545.5
+Vai colocar 2 casas depois do ponto n1.toFixed(2) -> 1545.50
+Para colocar a vírgula no lugar do ponto n1.toFixed(2).replace('.', ',') -> 1545,45
+
+Desta maneira vai ser colocada de forma monetária do país que for colocado
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> R$ 1.545,50
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) -> US$ 1.545,50
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) -> € 1.545,50
+
+FORMATANDO STRING
+
+TEMPLATE STRINGS
+"Meu nome é ${variável}"
+
+Contar quantos caracteres tem na string variável.lenght
+Deixar todas as letras maiúsculas variável.toUpperCase()
+Deixar todas as letras minúsculas variável.toLowerCase()
+
+Colocar o resultado em tela pode colocar document.write('')
+
+OPERADORES
+* Aritméticos
+    Usado pra fazer cálculos
+
+    Soma 5 + 2                          -> 7
+    Subtração 5 - 2                     -> 3
+    Multiplicação 5 * 2                 -> 10
+    Divisão real 5 / 2                  -> 2.5
+    Resto da divisão inteira 5 % 2      -> 1
+    Potência 5 ** 2                     -> 25
+
+    Ordem de precedência
+    1º ()
+    2° **
+    3° * / %
+    4° + -
+
+* Atribuição
+    AUTO-ATRIBUIÇÃO
+    var n = 3
+    n = n + 4               -> 7
+    n = n - 5               -> 2
+    n = n * 4               -> 8
+    n = n / 2               -> 4
+    n = n ** 2              -> 16
+    n = n % 5               -> 1
+
+    SIMPLIFICANDO
+    var n = 3
+    n += 4               -> 7
+    n -= 5               -> 2
+    n *= 4               -> 8
+    n /= 2               -> 4
+    n **= 2              -> 16
+    n %= 5               -> 1
+
+    POS INCREMENTO e POS DECREMENTO
+
+    var n = 5
+    n++ (somar 1) -> 6
+    n-- (subtrair 1) -> 5
+
+    PRE INCREMENTO e PRE DECREMENTO
+    var n = 5
+    ++n (somar 1) -> 6
+    --n (subtrair 1) -> 5
+
+* Relacionais
+    Maior            5 > 2       -> true
+    Menor            7 < 4       -> false
+    Maior ou igual   8 >= 8      -> true
+    Menor ou igual   9 <= 7      -> false
+    Igual            5 == 5      -> true
+    Diferente        4 != 4      -> false
+
+    # OPERADORES DE IDENTIDADE
+    Igual                5 == 5      -> true
+    Igual                5 == '5'    -> true
+    Idêntico             5 === '5'   -> false 
+    Idêntico             5 === 5     -> true
+    O Idêntico compara o tipo e o valor
+    Desigual restrito    5 !== '5'     -> true
+    O desigual restrito também compara tipo e valor
+
+* Lógicos
+    Não         !       -> Negação
+    E           &&      -> Conjunção
+    OU          ||      -> Disjunção
+
+
+    # NEGAÇÂO
+    True -> false
+    False -> true
+
+    # CONJUNÇÃO
+    True        &&      True        -> True
+    True        &&      False       -> False
+    False       &&      True        -> False
+    False       &&      False       -> False
+
+    # DISJUNÇÃO
+    True        ||      True        -> True
+    True        ||      False       -> True
+    False       ||      True        -> True
+    False       ||      False       -> False
+
+    # Ordem de precedência
+    1º !
+    2º &&
+    3º ||
+
+* Ternário
+    ? :
+    teste ? true : false
+    media >= 7 ? "Aprovado" : "Reprovado"
+
+    var x = 8
+    var res = x % 2 == 0 ? 5 : 9
+
+O typeof também é um operador.
+Ordem de precedência em uma expressão 
+    -->   var a = 5
+    -->   var b = 8 
+    
+    -->   a > b && b % 2 == 0    <--
+    -->   5 > 8 && 8 % 2 == 0    <--
+    -->   5 > 8 && 0 == 0    <--
+    -->   false && 0 == 0    <--
+    -->   false && true    <--
+    -->   false   <--   
+
+    1º Operadores Aritméticos   %
+    2º Operadores Relacionais   > ==
+    3º Operadores Lógicos       &&  
+
+    -->   a <= b || b / 2 == 2    <-- 
+    -->   5 <= 8 || 8 / 2 == 2    <-- 
+    -->   5 <= 8 || 4 == 2    <--
+    -->   true || 4 == 2    <-- 
+    -->   true || false    <-- 
+    -->   true    <-- 
+
+    1º Operadores Aritméticos   /
+    2º Operadores Relacionais   <= ==
+    3º Operadores Lógicos       ||
+
+1º Operadores Aritméticos   () ** * / % + - 
+2º Operadores Relacionais   < > >= <= == === != !== (Não tem ordem é o que aparecer primeiro) 
+3º Operadores Lógicos       ! && ||
