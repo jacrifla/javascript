@@ -98,7 +98,7 @@ R: 15
 Q04. Para que servem os operadores ++ e --?
 R: São operadores de incremento e decremento, somam ou subtraem 1
 
-AULA 10
+AULA 09
 Q01. Qual é a diferença entre usar =, == e  === em códigos escritos em JS?
 R: = recebe == igual === idêntico.
 
@@ -108,6 +108,18 @@ R: &&
 Q03. Sabe usar o operador ternário para colocar um entre dois valores em uma variável?
 R: var y = x % 2 == 0 ? 5 : 9
 
+AULA 10
+Q01. O que significa a sigla DOM?
+R: Document Object Model
+
+Q02. Sabe montar a árvore DOM de um website simples?
+R: Sim
+
+Q03. O que são os elementos Parent e os elementos Child em uma árvore DOM?
+R: main pode ser um elemento parent, e o h1 que vem dentro dele é um child
+
+Q04. Quais são os cinco principais métodos de selecionar elementos DOM dentro do JS?
+R: Por Marca, Name, Id, Classe, Seletor
 
 ========================================================================================
 COMENTÁRIOS
@@ -298,3 +310,99 @@ Ordem de precedência em uma expressão
 1º Operadores Aritméticos   () ** * / % + - 
 2º Operadores Relacionais   < > >= <= == === != !== (Não tem ordem é o que aparecer primeiro) 
 3º Operadores Lógicos       ! && ||
+
+O que é DOM?
+É um acrônimo para Document Object Model é um modelo de objetos para documentos, é quando roda o JavaScript no navegador 
+
+ÁRVORE DOM
+          window
+ location document history
+            html
+        head    body
+    meta  title  h1 p p div
+                      strong
+
+window.document.write(window.document.charset) -> vai mostrar na tela o UTF-8 
+window.document.write(window.navigator.appName) -> nome do navegador
+window.document.write(window.document.URL) -> a url acessada
+
+ACESSANDO UM ELEMENTO
+
+* por Marca
+    getElementsByTagName('p')[1] -> da pra selecionar mais de 1 tag <p></p> o [] escolhe qual parágrafo que quer fazer a alguma coisa
+    var corpo = window.document.body -> ta acessando o body da pagina
+    var p1 = window.document.getElementsByTagName('p')[0] -> pegou o primeiro parágrafo
+    corpo.style.background = 'black' -> mudou a cor de fundo do body
+    p1.style.color = 'blue' -> mudou a cor do primeiro parágrafo
+    document.write(p1.innerText) -> pega o que está escrito no parágrafo sem formatação
+    document.write(p1.innerHTML) -> pega o que está escrito no parágrafo, com as formatações das tags
+
+* por ID
+    getElementById()
+    Pega pelo Id da tag
+
+    <div id="msg"></div>
+    var d = window.document.getElementById('msg')
+    d.style.background = 'green' -> muda a cor do fundo
+    d.innerText = 'Estou aguardando...' -> muda para esse texto
+    window.document.getElementById('msg').innerText = 'Olá' -> pode ser feito desse jeito tbm
+
+* por Nome
+    getElementsByName()
+    pega vários elementos então tem que referenciar qual o elemento q irá ser alterado
+
+    <div name="msg"></div>
+    var d = window.document.getElementsByName('msg')[0]
+    d.innerText = 'Olá' -> muda para esse texto
+
+* por Classe
+    getElementsByClassName()
+    pega pela classe e pode pegar vários elementos
+
+    <div class="msg"></div>
+    var d = window.document.getElementsByClassName('msg')
+    d.innerText = 'Olá' -> muda para esse texto
+    window.document.getElementsByClassName('msg').innerText = 'Olá' -> pode ser feito desse jeito tbm
+
+* por Seletor
+    querySelector()
+    querySelectorAll()
+
+    <div id="msg"></div>
+
+    se for id #, se for classe .
+    var d = window.document.querySelector('div#msg')
+    d.style.color = 'blue'
+
+Eventos DOM
+
+Tudo que pode acontecer naquele elemento. Por exemplo eventos de mouse
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+# EXEMPLO
+    <div id="area">Interaja....</div>
+
+    var a = window.document.getElementById('area')
+
+    Colocar esses addEventListener em vez de colocar na tag
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+    function clicar() {
+        a.innerText = 'Clicou!'
+        a.style.background = 'red'
+    }
+    function entrar() {
+        a.innerText = 'Entrou!'
+    }
+    function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+    }
+
+Para descobrir o erro, f12, no console aparece
