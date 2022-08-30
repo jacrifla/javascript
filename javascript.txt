@@ -121,6 +121,16 @@ R: main pode ser um elemento parent, e o h1 que vem dentro dele é um child
 Q04. Quais são os cinco principais métodos de selecionar elementos DOM dentro do JS?
 R: Por Marca, Name, Id, Classe, Seletor
 
+AULA 12
+Q01. Você sabe usar a extensão Node Exec no VSCode?
+R: Sim
+
+Q02. Sabe criar uma condição em seu programa JS?
+R: Sim
+
+Q03. Consegue diferenciar condição simples e as condições compostas?
+R: Sim
+
 ========================================================================================
 COMENTÁRIOS
 // comentar uma linha
