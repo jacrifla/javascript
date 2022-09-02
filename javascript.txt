@@ -465,5 +465,6 @@ Então ele mudará para preto
                     bloco 3
                     break
                 default:
+                    bloco final
             }
 
