@@ -43,7 +43,7 @@ Então ele mudará para preto
 
     Comandos no JavaScript
     alert('Simples') -> Trava a tela e da uma mensagem
-    confirm('?') -> Para confirmar algo na tela, se salvar em uma variavel ele retorna booleano
+    confirm('?') -> Para confirmar algo na tela, se salvar em uma variável ele retorna booleano
     prompt('') -> Retorna um valor do usuario
 
 
@@ -142,6 +142,39 @@ Então ele mudará para preto
     Q03. Consegue diferenciar condição simples e as condições compostas?
     R: Sim
 
+    AULA 13
+    Q01. Sabe mudar a cor de fundo de um site dinamicamente, usando JS?
+    R: Sim
+
+    Q02. Consegue inserir uma imagem dentro do seu site sem ter a tag <img> previamente criada?
+    R: Sim
+
+    Q03. Ja treinou bastante o uso de condições simples, compostas, aninhadas e múltiplas?
+    R: +-
+
+    AULA 14
+    Q01. O que eu faço se quiser fazer uma determinada atividade acontecer várias vezes?
+    R: Pode usar o while, do ou for
+
+    Q02. Sabe diferenciar as estruturas de condição e as estruturas de repetição?
+    R: Sim
+
+    Q03. Consegue dizer a diferença entre as estruturas while e a do..while?
+    R: while, teste lógico no começo e do..while, teste lógico no final
+
+    AULA 15
+    Q01. Já aprendeu a usar direito a extensão Watch in Chrome no VSCode?
+    R: Não tem mais essa extensão, mas uso outra :)
+
+    Q02. Ja aprendeu a usar o Modo de Depuração do VSCode?
+    R: Sim
+
+    Q03. Já fez todos os testes com as estruturas while, do..while e for?
+    R: Sim
+
+    Q04. Quer aprender um pouco mais como manipular dados em controles HTML com JS?
+    R: Sim
+
 ========================================================================================
 - ANOTAÇÕES
     COMENTÁRIOS
@@ -153,9 +186,9 @@ Então ele mudará para preto
 
     VARIÁVEL
 
-    var -> variavel global
+    var -> variável global
     let ->
-    const -> variavel constante, nao pode mudar
+    const -> variável constante, nao pode mudar
 
     DATA TYPES
     number
@@ -169,7 +202,7 @@ Então ele mudará para preto
         array
     function
 
-    Para saber o tipo da variavel
+    Para saber o tipo da variável
     typeof nomeVariavel
 
     Os principais tipos primitivos são: number e string.
@@ -453,7 +486,7 @@ Então ele mudará para preto
                     bloco 3
                 }
         Condição Múltipla
-            Usada em condições expecificas, o break é importante, não pode esquecer de colocar
+            Usada em condições específicas, o break é importante, não pode esquecer de colocar
             switch(expressão){
                 case valor 1:
                     bloco 1
@@ -468,3 +501,39 @@ Então ele mudará para preto
                     bloco final
             }
 
+    Repetições
+        estrutura de repetição com teste lógico no início
+        while(condição){
+            bloco
+        }
+        vai ficar repetindo ate a condição ser falsa
+
+        do {
+
+        } while (condição)
+        estrutura de repetição com teste lógico no final
+
+        function comerPizza(){
+            comerFatia()
+            comerFatia()
+            comerFatia()
+            comerFatia()
+            comerFatia()
+            comerFatia()
+            comerFatia()
+            comerFatia()
+        }
+
+        Em vez de ficar repetindo o mesmo código, pode usar o while e fazer assim: 
+
+        function comerPizza(){
+            while (temFatia()) {
+                comerFatia()
+            }
+        }
+
+        For
+            Estrutura de repetição com variável de controle
+            for (início; teste; incremento) {
+                bloco
+            }
