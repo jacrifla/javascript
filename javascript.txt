@@ -175,6 +175,55 @@ Então ele mudará para preto
     Q04. Quer aprender um pouco mais como manipular dados em controles HTML com JS?
     R: Sim
 
+    AULA 16
+    Q01. Já treinou bastante o uso das estruturas de repetição while, do...while e for?
+    R: Um pouco
+
+    Q02. Ja aprendeu como manipular objetos de formulários HTML usando JS?
+    R: Sim
+
+    Q03. Seria bom tornar seus códigos menores e mais simplificados?
+    R: Sim
+
+    Q04. Você é daquele tipo de pessoa que ouviu alguém dizer que "usar array é difícil"?
+    R: Não
+
+    AULA 17
+    Q01. Conseguiu simplificar seus códigos com o uso de Array?
+    R: Sim
+
+    Q02. Sabe colocar um array em ordem usando apenas uma chamada de função?
+    R: sort()
+
+    Q03. Lembra como disparar uma função simples quando apertamos um botão?
+    R: Sim
+
+    Q04. Quer aprender mais sobre funções?
+    R: Sim
+
+    AULA 18
+    Q01. Já aprendeu a usar direito a extensão Watch in Chrome no VSCode?
+    R: Não tem mais essa extensão
+
+    Q02. Já aprendeu a usar o Modo de Depuração do VSCode?
+    R: Sim
+
+    Q03. Já treinou bastante com os componentes de array e function?
+    R: +-
+
+    AULA 19
+    Q01. Você assistiu o curso completo?
+    R: Sim
+
+    Q02. Você fez todos os exercícios propostos?
+    R: Sim
+
+    Q03. Você já tentou fazer os exercícios sem a ajuda do vídeo?
+    R: Não
+
+    Q04. Você já criou uma situação qualquer e tentou resolver por conta própria?
+    R: Não
+
 ========================================================================================
 - ANOTAÇÕES
     COMENTÁRIOS
@@ -233,7 +282,7 @@ Então ele mudará para preto
     TEMPLATE STRINGS
     "Meu nome é ${variável}"
 
-    Contar quantos caracteres tem na string variável.lenght
+    Contar quantos caracteres tem na string variável.length
     Deixar todas as letras maiúsculas variável.toUpperCase()
     Deixar todas as letras minúsculas variável.toLowerCase()
 
@@ -434,13 +483,13 @@ Então ele mudará para preto
 
     Eventos DOM
 
-    Tudo que pode acontecer naquele elemento. Por exemplo eventos de mouse
-    mouseenter
-    mousemove
-    mousedown
-    mouseup
-    click
-    mouseout
+        Tudo que pode acontecer naquele elemento. Por exemplo eventos de mouse
+        mouseenter
+        mousemove
+        mousedown
+        mouseup
+        click
+        mouseout
     # EXEMPLO
         <div id="area">Interaja....</div>
 
@@ -501,7 +550,7 @@ Então ele mudará para preto
                     bloco final
             }
 
-    Repetições
+    * Repetições
         estrutura de repetição com teste lógico no início
         while(condição){
             bloco
@@ -537,3 +586,77 @@ Então ele mudará para preto
             for (início; teste; incremento) {
                 bloco
             }
+    
+    Variáveis simples -> Só recebem um valor por vez
+    Variáveis compostas -> armazenam vários valores na mesma estrutura
+                        [        elementos           ]
+                                ,conteúdo/valor,
+        array/vetor a = ['carro1', 'carro2', 'carro3']
+        índice              0          1         2 
+
+        Criando um array
+            let num = [5,8,4]
+
+        Adicinando um valor no array
+            num[3] = 6
+        
+        Colocar um valor na última posição 
+            num.push(7)
+
+        Para saber o comprimento do array
+            num.length
+
+        Organizar os números em ordem crescente
+            num.sort()
+        
+        Mostrando os valores do vetor
+            for(let pos = 0; pos < num.length; pos++) {
+                console.log(num[pos])
+            }
+
+            for(let pos in num) {
+                console.log(num[pos])
+            }
+        
+        Buscar valores dentro do array
+            num.indexOf(7)
+        
+    Função
+        Todas as funções tem uma chamada e uma ação, mas quase todas podem ter parâmetros e um retorno
+        - São ações executadas assim que são chamadas ou em decorrência de algum evento
+        - Uma função pode receber parâmetros e retornar um resultado
+        
+        Montando a função
+        function ação(paramêtros){
+            ? <- ação da função
+            return res <- retornando de um resultado
+        }
+        ação(5) <- Ta fazendo a chamada da função
+
+        function parimp(n) { <- n é o paramêtro | parimp é o nome da função
+            if (n % 2 == 0) {
+                return 'Par'
+            } else {
+                return 'Impar'
+            }
+        }
+
+        let res = parimp(11) <- chamada da função
+
+    Objetos
+        let amigo {nome:'José', sexo:'M', peso:'85.4', engordar(p){funcion}}
+
+Próximos Passos
+    - functions
+        arrow function
+        callback
+        funcões anônimas
+        IIFE
+        JavaScript funcional
+    - objetos
+
+    - modularização
+    - regEx
+    - JSON
+    - AJAX
+    - NodeJS
